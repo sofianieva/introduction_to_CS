@@ -6,6 +6,8 @@ using namespace std;
 //1-Función esPrimo
 //Toma como argumento un número entero n y devuelve un booleano.
 
+/**no se llaman parámetros? */
+
 /* Hacemos una función que determine si el número n es primo.
 Para eso, vamos comprobando si algún número entero, entre 2 y n, lo divide. La variable i va recorriendo esos valores mientras no divida a n.
 En el caso de que n tenga un divisor distinto de 1 y n, se corta el ciclo antes de que i alcance el valor de n, y por lo tanto, la función devuelve el valor "false". Caso contrario, i alcanza el valor de n, y la función devuelve el valor "true". */
@@ -30,6 +32,8 @@ bool esPrimo(int n){
 //2-Función cantidadPrimosMenoresOIguales
 //Toma como argumento un número entero n y devuelve otro entero.
 
+/**no se llaman parámetros? */
+
 /* Hacemos una función que obtenga la cantidad de números primos menores o iguales a un número n.
 Para eso, definimos la variable i, que recorre los números de 2 a n, y otra llamada contador. La última guarda la cantidad de primos hasta ese momento,incrementándose en uno cada vez que la función esPrimo evaluada en i devuelve "true". Finalmente, la función devuelve el valor contador. */
 
@@ -48,8 +52,10 @@ int cantidadPrimosMenoresOIguales(int n){
 //3-Función cantidadDivisoresPrimos
 //Toma como argumento un número entero n y devuelve otro entero.
 
+/**no se llaman parámetros? */
+
 /* Hacemos una función que obtenga la cantidad de divisores primos del número n.
-Para eso, definimos nuevamente a la variable i, que recorre los enteros de 2 a n, y a otra contador.Esta última guarda la cantidad de divisores primos hasta ese momento, incrementándose en uno cada vez que la expresión esPrimo(i) es verdadera e i divida a n. Finalmente, la función devuelve el valor contador. */
+Para eso, definimos nuevamente a la variable i, que recorre los enteros de 2 a n, y a otra contador.Esta última guarda la cantidad de divisores#FFA500 primos hasta ese momento, incrementándose en uno cada vez que la expresión esPrimo(i) es verdadera e i divida a n. Finalmente, la función devuelve el valor contador. */
 
 int cantidadDivisoresPrimos(int n){
 	int contador=0;
@@ -64,10 +70,15 @@ int cantidadDivisoresPrimos(int n){
 }
 
 //4-Función iesimoDivisorPrimo
-//Toma como argumentos dos enteros n e i y devuelve un entero.
+/*Toma como argumentos*/ /**no se llaman parámetros? */ /*dos enteros n e i y devuelve un entero.*/
 
 /* Hacemos una función que obtenga el i-ésimo divisor primo de n.
 ***************************************************** */
+
+/**
+ * return dentro del while o el if?
+ */
+
 
 int iesimoDivisorPrimo(int n, int i){
 	if(cantidadDivisoresPrimos(n)<i){
@@ -76,11 +87,11 @@ int iesimoDivisorPrimo(int n, int i){
 		int contador=0;
 		int j=2;
 		while(j<=n){
-			if(contador==i){
-				return j-1;
-			}else if(n%j==0 && esPrimo(j)){
-					contador=contador+1;
+			if(n%j==0 && esPrimo(j)){
+				contador=contador+1;
 			}
+			if(contador==i){
+				return j;
 			j=j+1;
 		}			
 	}
@@ -109,6 +120,8 @@ int iesimoDivisorPrimo(int n, int i){
 //5-Función potenciaIesimoDivisorPrimo
 //Toma como argumentos dos enteros n e i y devuelve un entero.
 
+/**no se llaman parámetros? */
+
 /* Hacemos una función para obtener la potencia del i-ésimo divisor primo de n en su descomposión en factores primos.
 Para eso, primero vemos si la cantidad de divisores primos de n es menor que i, utilizando la función cantidadDivisoresPrimos.En este caso, la función devuelve -1. Si no, definimos dos variables: iesimo, que es el i-ésimo divisor primo de n, y potencia. Esta última la iniciamos en cero, y la incrementamos en uno hasta que iesimo^(potencia+1) no divide a n.Finalmente el programa devuelve el valor de potencia. */
 
@@ -128,8 +141,13 @@ int potenciaIesimoDivisorPrimo(int n, int i){
 
 		
 //Función main
-/* Con esta función podemos elegir por línea de comandos, cuál de las funciones anteriores utilizar y con qué argumentos.
-Para esto utilizamos un condicional que evalúa que el primer argumento de la línea de comandos sea igual a la función con el mismo nombre. De acuerdo a eso, utiliza la misma e imprime por pantalla los valores que se esperan. */		
+/* Con esta función podemos elegir por línea de comandos, cuál de las funciones anteriores utilizar y con qué argumentos.*/
+
+/**no se llaman parámetros? */
+
+/*Para esto utilizamos un condicional que evalúa que el primer argumento de la línea de comandos sea igual a la función con el mismo nombre. De acuerdo a eso, utiliza la misma e imprime por pantalla los valores que se esperan. */		
+
+/**redactar mejor */
 
 int main(int argc, char* argv[]){
 	string funcion=argv[1];
