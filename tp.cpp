@@ -55,7 +55,7 @@ int cantidadPrimosMenoresOIguales(int n){
 /**no se llaman parámetros? */
 
 /* Hacemos una función que obtenga la cantidad de divisores primos del número n.
-Para eso, definimos nuevamente a la variable i, que recorre los enteros de 2 a n, y a otra contador.Esta última guarda la cantidad de divisores#FFA500 primos hasta ese momento, incrementándose en uno cada vez que la expresión esPrimo(i) es verdadera e i divida a n. Finalmente, la función devuelve el valor contador. */
+Para eso, definimos nuevamente a la variable i, que recorre los enteros de 2 a n, y a otra contador.Esta última guarda la cantidad de divisores primos hasta ese momento, incrementándose en uno cada vez que la expresión esPrimo(i) es verdadera e i divida a n. Finalmente, la función devuelve el valor contador. */
 
 int cantidadDivisoresPrimos(int n){
 	int contador=0;
@@ -187,6 +187,3 @@ int main(int argc, char* argv[]){
 		}
 	}return 0;
 }	
-
-	
-	  
