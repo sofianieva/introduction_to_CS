@@ -1,1 +1,1 @@
-# Project for the university course Introduction to Computer Sciences (in spanish)
+## Project for the university course Introduction to Computer Sciences (in spanish)
